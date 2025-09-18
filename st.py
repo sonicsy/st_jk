@@ -59,6 +59,10 @@ except:
 
 
 fig = px.line(df_first_data, title="捷克箱间主动均衡效果-折线图", height=800)
+curve_len = len(fig.data)
+for i in range(curve_len):
+    if (i != 0) and (i != curve_len-1):
+        fig.data[i].update(visible='legendonly')     # 默认隐藏中间的线
 fig.update_layout(xaxis_title="Cell Index", yaxis_title="Cell Voltage (V)", yaxis_range=[3, 3.4])  # 设置y轴范围
 st.plotly_chart(fig, use_container_width=True)
 
