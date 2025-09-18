@@ -58,7 +58,7 @@ except:
 #     st.warning("请至少选择一个日期进行显示。")
 
 
-fig = px.line(df_first_data, title="捷克箱间主动均衡效果-折线图")
+fig = px.line(df_first_data, title="捷克箱间主动均衡效果-折线图", height=800)
 fig.update_layout(xaxis_title="Cell Index", yaxis_title="Cell Voltage (V)", yaxis_range=[3, 3.4])  # 设置y轴范围
 st.plotly_chart(fig, use_container_width=True)
 
