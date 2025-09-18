@@ -7,7 +7,7 @@ import plotly.express as px
 # 方法一：忽略所有来自'openpyxl.styles.stylesheet'模块的UserWarning
 warnings.filterwarnings('ignore', category=UserWarning, module='openpyxl.styles.stylesheet')
 
-df = pd.read_excel('协能捷克-218830000BC1-BMS-202509130639.xlsx',index_col='采集时间')
+df = pd.read_excel('datas.xlsx',index_col='采集时间')
 
 # 将索引格式转换为日期时间格式
 df.index = pd.to_datetime(df.index)
